@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <title>무한도전 덕후력 테스트</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <nav>
+          <a href="/">무한도전 덕후력 테스트</a>
+        </nav>
+      </header>
+
+      <main>
+        <!-- 메인페이지 -->
+        <section id="main-page" style="display: block">
+          <img src="/img/bgimg.png" alt="무한도전 이미지" />
+          <h1>
+            무한도전 <br /><span style="color: crimson">'덕후력'</span>
+            <br />테스트
+          </h1>
+          <p>누구보다 무한도전 많이 본 사람! 손!✋</p>
+          <p>무한도전 레전드는 다 꿰고있다! 손!🤚</p>
+          <p>무한도전에 관한거라면 뭐든 자신있다! 손!👋</p>
+          
+          <button id="start-btn">테스트 시작!</button>
+          <div class="hash-tags">
+            <span>#무한도전 레전드</span>
+            <span>#덕후 테스트</span>
+            <span>#무도광테스트</span>
+            <span>#니노막시무스카이저소제</span>
+          </div>
+        </section>
+
+        <!-- 퀴즈 페이지 -->
+        <section id="quiz-page" class="quiz-page" style="display: none">
+          <span id="user-score"></span>
+          <div id="progress-bar">
+            <div id="progress"></div>
+          </div>
+          <span class="hint">Hint</span>
+          <div class="hint-modal" style="display: none">
+            <div class="hint-modal__confirm">
+              <p>힌트를 얻게 되면 5점이 차감됩니다. 그래도 원하시나요?</p>
+              <span class="okay">Yes</span>
+              <span class="nope">No</span>
+            </div>
+            <p class="hint-modal__hint-text" style="display: none"></p>
+          </div>
+          <img src="/img/1.png" class="quiz-img" alt="문제 이미지1" />
+          <form action="">
+            <label for="quiz1"></label>
+            <input
+              class="answer-input"
+              id="quiz1"
+              type="text"
+              autocomplete="off"
+            />
+            <p style="color: crimson; margin: 10px 0">
+              (띄어쓰기를 유의해주세요)
+            </p>
+            <button class="answer-input-btn">입력</button>
+          </form>
+        </section>
+
+        <!-- 로딩 페이지 -->
+        <section id="loading-page" class="loading-page" style="display: none">
+          <h2 id="loading-text">당신의 무도력을 확인중입니다...👨🏼‍🔬</h2>
+          <img
+            src="https://mblogthumb-phinf.pstatic.net/MjAyMTAzMjBfOCAg/MDAxNjE2MjM0OTg4ODIy._QVKrNerN5WLqnjl-weUfiGY91mcSBQ4FlwAteHIZicg.wL3Rj02vutnXpfHNNnufuPgw1JaiVFM0Fk-TseDuyrgg.GIF.eu2/20210320%25EF%25BC%25BF172847.gif?type=w800"
+            id="loading-img"
+            alt="무도 로딩이미지"
+          />
+        </section>
+
+        <!-- 결과 페이지 -->
+        <section id="result-page" class="result-page" style="display: none">
+          <h1>
+            당신의<br />
+            점수는?
+          </h1>
+          <h2 id="result-score"></h2>
+          <img src="" alt="결과이미지" id="result-img" />
+          <p id="result-text"></p>
+          <button id="share-link">테스트 결과 공유하기</button>
+          <button id="restart">다시하기</button>
+        </section>
+      </main>
+    </div>
+
+    <script defer type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/correct.js"></script>
+    <script type="module" src="/js/imgs.js"></script>
+  </body>
+</html>
